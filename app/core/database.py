@@ -26,6 +26,6 @@ class Base(DeclarativeBase):
 
 
 async def get_async_session() -> AsyncGenerator[AsyncSession, None]:
-    """Возвращает асинхронную сессию SQLAlchemy"""
+    """Возвращает асинхронную сессию SQLAlchemy."""
     async with async_session_factory() as async_session:
         yield async_session

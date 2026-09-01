@@ -8,11 +8,13 @@ from app.core.database import Base
 
 
 class BookingStatus(str, enum.Enum):
-    ACTIVE = "active"
-    CANCELLED = "cancelled"
+    """Статус бронирования."""
+    ACTIVE = 'active'
+    CANCELLED = 'cancelled'
 
 
 class BookingModel(Base):
+    """ORM-модель бронирования столика."""
     __tablename__ = 'bookings'
 
     id: Mapped[int] = mapped_column(primary_key=True)

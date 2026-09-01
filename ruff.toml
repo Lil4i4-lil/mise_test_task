@@ -1,0 +1,11 @@
+extend-exclude = ["tests"]
+
+[lint]
+select = ["E", "F", "Q"]
+
+[lint.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = "double"
+
+[lint.per-file-ignores]
+"app/core/init_db.py" = ["F401"]

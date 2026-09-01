@@ -1,3 +1,3 @@
 class BookingConflictError(Exception):
-    """Слот уже занят"""
+    """Слот уже занят."""
     pass
