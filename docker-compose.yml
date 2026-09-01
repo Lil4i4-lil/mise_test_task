@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: restaurant-booking-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:////./bookings.db
+    volumes:
+      - booking_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  booking_data:
